@@ -25,9 +25,9 @@ NB: This is not 'real' UIAutomation it's just a way to communicate with your app
  2. In your App Delegate, install the
     helper
 
-This will install a 1 pixel text field behind your views on your main window. UIAutomation can then change the text field in order to trigger notifications.
+    This will install a 1 pixel text field behind your views on your main window. UIAutomation can then change the text field in order to trigger notifications.
 
-    HSUIAutomationCheatWindow(mainWindow);
+        HSUIAutomationCheatWindow(mainWindow);
 
  3. Add a helper function to Snapshot.js
 
@@ -40,24 +40,24 @@ This will install a 1 pixel text field behind your views on your main window. UI
  4. Send notifications from your
     snapshot.js
 
-Anywhere in your snapshot.js you can send a notification to your app
+    Anywhere in your snapshot.js you can send a notification to your app
 
-    sendNotification("SnapDisplayMyScreen");
+        sendNotification("SnapDisplayMyScreen");
 
  5. Respond to notifications within your
     app
 
-within your app, a standard NSNotification named @"SnapDisplayMyScreen" will be broadcast.
+    within your app, a standard NSNotification named @"SnapDisplayMyScreen" will be broadcast.
 
-you can use the SNAPSHOT define to handle this with custom code
+    you can use the SNAPSHOT define to handle this with custom code
 
-    #ifdef SNAPSHOT
-    
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(doSomething:)
-                                                     name:@"SnapDisplayMyScreen" object:nil];
-    
-    #endif
+        #ifdef SNAPSHOT
+        
+            [[NSNotificationCenter defaultCenter] addObserver:self
+                                                     selector:@selector(doSomething:)
+                                                         name:@"SnapDisplayMyScreen" object:nil];
+        
+        #endif
 
 ##Installation
 
