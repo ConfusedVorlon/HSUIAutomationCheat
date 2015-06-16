@@ -9,7 +9,6 @@
 #ifdef SNAPSHOT
 
 #import "HSUIAutomationCheat.h"
-#import "HSCloudDefaults.h"
 
 @interface HSUIAutomationCheat ()
 
