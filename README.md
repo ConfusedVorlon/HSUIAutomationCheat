@@ -1,12 +1,12 @@
 ##Use UIAutomation without the pain of UIAutomation
 
-Snapshot is awesome. 
+[Snapshot][1] is awesome. 
 
 However it drives your app using Apple's UIAutomation which is brittle and painful (and another thing you have to learn).
 
 If you want to drive your app for [Snapshot][1] - and don't care about proper UIAutomation, then this class is for you.
 
-NB: This is not 'real' UIAutomation it's just a way to communicate with your app easily through UIAutomation.
+NB: This is not 'real' UIAutomation. It is not a way to test your code, just an easy way to script your app to generate screenshots.
 
 ##Usage
 
