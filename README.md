@@ -1,10 +1,12 @@
 ##Use UIAutomation without the pain of UIAutomation
 
-Snapshot is awesome. However it drives your app using Apple's UIAutomation which is brittle and painful (and another thing to learn).
+Snapshot is awesome. 
 
-If you want to drive your app for Snapshot - and don't care about proper UIAutomation, then this class is for you.
+However it drives your app using Apple's UIAutomation which is brittle and painful (and another thing you have to learn).
 
-NB: This is not UIAutomation it's just a way to communicate with your app through UIAutomation.
+If you want to drive your app for [Snapshot][1] - and don't care about proper UIAutomation, then this class is for you.
+
+NB: This is not 'real' UIAutomation it's just a way to communicate with your app easily through UIAutomation.
 
 ##Usage
 
@@ -23,9 +25,9 @@ NB: This is not UIAutomation it's just a way to communicate with your app throug
  2. In your App Delegate, install the
     helper
 
-    This will install a 1 pixel text field behind your views on your main window. UIAutomation can then change the text field in order to trigger notifications.
+This will install a 1 pixel text field behind your views on your main window. UIAutomation can then change the text field in order to trigger notifications.
 
-        HSUIAutomationCheatWindow(mainWindow);
+    HSUIAutomationCheatWindow(mainWindow);
 
  3. Add a helper function to Snapshot.js
 
@@ -36,26 +38,29 @@ NB: This is not UIAutomation it's just a way to communicate with your app throug
  4. Send notifications from your
     snapshot.js
 
-    Anywhere in your snapshot.js you can send a notification to your app
+Anywhere in your snapshot.js you can send a notification to your app
 
-        sendNotification("SnapDisplayMyScreen");
+    sendNotification("SnapDisplayMyScreen");
 
  5. Respond to notifications within your
     app
 
-    within your app, a standard NSNotification named @"SnapDisplayMyScreen" will be broadcast.
+within your app, a standard NSNotification named @"SnapDisplayMyScreen" will be broadcast.
 
-    you can use the SNAPSHOT define to handle this with custom code
+you can use the SNAPSHOT define to handle this with custom code
 
-        #ifdef SNAPSHOT
-        
-            [[NSNotificationCenter defaultCenter] addObserver:self
-                                                     selector:@selector(doSomething:)
-                                                         name:@"SnapDisplayMyScreen" object:nil];
-        
-        #endif
+    #ifdef SNAPSHOT
+    
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(doSomething:)
+                                                     name:@"SnapDisplayMyScreen" object:nil];
+    
+    #endif
 
 ##Installation
 
 Download the class and add it to your project.  
 You can safely include this in production code; When SNAPSHOT is not defined, the class will compile to nothing.
+
+
+  [1]: https://github.com/KrauseFx/snapshot
