@@ -37,7 +37,7 @@ NB: This is not 'real' UIAutomation. It is not a way to test your code, just an 
 
         #endif
 
- 3. Add a helper function to Snapshot.js
+ 3. Add an extra helper function to SnapshotHelper.js
 
     function sendNotification(name) {
 
