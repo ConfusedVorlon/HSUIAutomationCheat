@@ -8,18 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#ifdef SNAPSHOT
-
-#define HSUIAutomationCheatWindow(window) [HSUIAutomationCheat installForWindow:window]
-
 @interface HSUIAutomationCheat : NSObject
 
 +(void)installForWindow:(UIWindow*)window;
 
 @end
 
-#else
-
-#define HSUIAutomationCheatWindow(window)
-
-#endif

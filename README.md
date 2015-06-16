@@ -27,7 +27,15 @@ NB: This is not 'real' UIAutomation. It is not a way to test your code, just an 
 
     This will install a 1 pixel text field behind your views on your main window. UIAutomation can then change the text field in order to trigger notifications.
 
-        HSUIAutomationCheatWindow(mainWindow);
+        #import <HSUIAutomationCheat/HSUIAutomationCheat.h>
+
+        (and then in application:didFinishLaunchingWithOptions:)
+
+        #ifdef SNAPSHOT
+
+            [HSUIAutomationCheat installForWindow:mainWindow];
+
+        #endif
 
  3. Add a helper function to Snapshot.js
 
@@ -55,7 +63,8 @@ NB: This is not 'real' UIAutomation. It is not a way to test your code, just an 
         
             [[NSNotificationCenter defaultCenter] addObserver:self
                                                      selector:@selector(doSomething:)
-                                                         name:@"SnapDisplayMyScreen" object:nil];
+                                                         name:@"SnapDisplayMyScreen" 
+                                                       object:nil];
         
         #endif
 
@@ -66,7 +75,6 @@ Install with CocoaPods
     pod 'HSUIAutomationCheat', '~> 0.0'
 
 or download the class and add it to your project.  
-You can safely include this in production code; When SNAPSHOT is not defined, the class will compile to nothing.
 
 
   [1]: https://github.com/KrauseFx/snapshot

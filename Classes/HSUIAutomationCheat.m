@@ -6,7 +6,6 @@
 //
 //
 
-#ifdef SNAPSHOT
 
 #import "HSUIAutomationCheat.h"
 
@@ -71,4 +70,3 @@
 
 @end
 
-#endif
