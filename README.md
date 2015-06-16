@@ -32,7 +32,9 @@ This will install a 1 pixel text field behind your views on your main window. UI
  3. Add a helper function to Snapshot.js
 
     function sendNotification(name) {
+
       UIATarget.localTarget().frontMostApp().windows()["SNAPSHOT_WINDOW"].textFields()["SNAPSHOT_FIELD"].setValue(name);
+      
     }
 
  4. Send notifications from your
