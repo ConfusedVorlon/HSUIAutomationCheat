@@ -34,7 +34,7 @@ This will install a 1 pixel text field behind your views on your main window. UI
     function sendNotification(name) {
 
       UIATarget.localTarget().frontMostApp().windows()["SNAPSHOT_WINDOW"].textFields()["SNAPSHOT_FIELD"].setValue(name);
-      
+
     }
 
  4. Send notifications from your
@@ -61,7 +61,11 @@ you can use the SNAPSHOT define to handle this with custom code
 
 ##Installation
 
-Download the class and add it to your project.  
+Install with CocoaPods
+
+    pod 'HSUIAutomationCheat', '~> 0.0'
+
+or download the class and add it to your project.  
 You can safely include this in production code; When SNAPSHOT is not defined, the class will compile to nothing.
 
 
