@@ -1,4 +1,4 @@
-Use UIAutomation without the pain of UIAutomation
+##Use UIAutomation without the pain of UIAutomation
 
 Snapshot is awesome. However it drives your app using Apple's UIAutomation which is brittle and painful (and another thing to learn).
 
@@ -6,9 +6,11 @@ If you want to drive your app for Snapshot - and don't care about proper UIAutom
 
 NB: This is not UIAutomation it's just a way to communicate with your app through UIAutomation.
 
-**Usage**
+##Usage
 
-As described in the Snapshot documentation, make sure you have defined SNAPSHOT as true.
+ 1. As described in the Snapshot
+    documentation, make sure you have
+    defined SNAPSHOT as true.
 
 e.g. in your Snapfile
 
@@ -18,20 +20,28 @@ or use a prefix file and
 
     #define SNAPSHOT true
 
-in your App Delegate, install the helper
+ 2. In your App Delegate, install the
+    helper
 
-    HSUIAutomationCheatWindow(mainWindow)
+This will install a 1 pixel text field behind your views on your main window. UIAutomation can then change the text field in order to trigger notifications.
 
-in your SnapshotHelper.js file, add the following function
+    HSUIAutomationCheatWindow(mainWindow);
+
+ 3. Add a helper function to Snapshot.js
 
     function sendNotification(name) {
       UIATarget.localTarget().frontMostApp().windows()["SNAPSHOT_WINDOW"].textFields()["SNAPSHOT_FIELD"].setValue(name);
     }
 
+ 4. Send notifications from your
+    snapshot.js
 
-now you can use the function anywhere in your snapshot.js to send a notification to your app
+Anywhere in your snapshot.js you can send a notification to your app
 
     sendNotification("SnapDisplayMyScreen");
+
+ 5. Respond to notifications within your
+    app
 
 within your app, a standard NSNotification named @"SnapDisplayMyScreen" will be broadcast.
 
@@ -45,6 +55,7 @@ you can use the SNAPSHOT define to handle this with custom code
     
     #endif
 
-**Installation**
+##Installation
 
-Download the class and add it to your project.  When SNAPSHOT is not defined, the class should compile to nothing.
+Download the class and add it to your project.  
+You can safely include this in production code; When SNAPSHOT is not defined, the class will compile to nothing.
