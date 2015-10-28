@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "HSUIAutomationCheat"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.deprecated = true
   s.summary      = "Drive your app using UIAutomation - painlessly"
 
@@ -75,7 +75,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/ConfusedVorlon/HSUIAutomationCheat.git", :tag => "0.0.4" }
+  s.source       = { :git => "https://github.com/ConfusedVorlon/HSUIAutomationCheat.git", :tag => "0.0.5" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
