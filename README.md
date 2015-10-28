@@ -1,3 +1,8 @@
+
+##Deprecated
+
+Snapshot 1.0 uses UITesting - so this no longer applies.
+
 ##Use UIAutomation without the pain of UIAutomation
 
 [Snapshot][1] is awesome. 
