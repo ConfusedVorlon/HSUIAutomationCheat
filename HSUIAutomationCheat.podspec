@@ -17,7 +17,9 @@ Pod::Spec.new do |s|
 
   s.name         = "HSUIAutomationCheat"
   s.version      = "0.0.5"
-  s.deprecated = true
+  s.deprecated   = true
+  s.deprecated_in_favor_of = 'HSTestingBackchannel'
+
   s.summary      = "Drive your app using UIAutomation - painlessly"
 
   s.description  = <<-DESC
