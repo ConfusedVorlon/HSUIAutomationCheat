@@ -2,6 +2,7 @@
 ##Deprecated
 
 Snapshot 1.0 uses UITesting - so this no longer applies.
+
 Use [HSTestingBackchannel][2] instead
 
 ##Use UIAutomation without the pain of UIAutomation
