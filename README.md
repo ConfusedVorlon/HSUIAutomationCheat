@@ -2,6 +2,7 @@
 ##Deprecated
 
 Snapshot 1.0 uses UITesting - so this no longer applies.
+Use [HSTestingBackchannel][2] instead
 
 ##Use UIAutomation without the pain of UIAutomation
 
@@ -83,3 +84,4 @@ or download the class and add it to your project.
 
 
   [1]: https://github.com/KrauseFx/snapshot
+  [2]: https://github.com/ConfusedVorlon/HSTestingBackchannel
